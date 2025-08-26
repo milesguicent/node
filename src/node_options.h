@@ -136,6 +136,7 @@ class EnvironmentOptions : public Options {
   bool experimental_global_web_crypto = true;
   bool experimental_import_meta_resolve = false;
   std::string input_type;  // Value of --input-type
+  std::string experimental_ext;  // Value of --experimental-ext
   bool entry_is_url = false;
   bool permission = false;
   std::vector<std::string> allow_fs_read;

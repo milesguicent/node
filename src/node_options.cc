@@ -690,6 +690,10 @@ EnvironmentOptionsParser::EnvironmentOptionsParser() {
             "set module type for string input",
             &EnvironmentOptions::input_type,
             kAllowedInEnvvar);
+  AddOption("--experimental-ext",
+            "set fallback extention for entrypoint file",
+            &EnvironmentOptions::experimental_ext,
+            kAllowedInEnvvar);
   AddOption(
       "--experimental-specifier-resolution", "", NoOp{}, kAllowedInEnvvar);
   AddAlias("--es-module-specifier-resolution",
