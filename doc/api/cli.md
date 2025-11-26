@@ -1122,6 +1122,24 @@ added:
 
 Enable exposition of [EventSource Web API][] on the global scope.
 
+### `--experimental-ext`
+
+> Stability: 1.0 - Early development
+
+If the entrypoint doesn't have an extension, the one specified here will be used instead.
+Useful for executable typescript files, who may not have an extention.
+
+```ts
+#!/usr/bin/env -S node --experimental-ext mts
+
+import fs from 'node:fs'
+
+async function writeHelloWorld(path: string): Promise<void> {
+  await fs.promises.writeFile(path, 'Hello World !');
+}
+
+```
+
 ### `--experimental-import-meta-resolve`
 
 <!-- YAML
